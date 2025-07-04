@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import CountdownTimer from "./CountdownTimer";
 import locationIcon from "./assets/locationIcon.svg";
 import clockIcon from "./assets/clockIcon.svg";
+import mailIcon from "./assets/mailIcon.svg";
 import mapIcon from "./assets/mapIcon.svg";
 import ParticipationForm from "./ParticipationForm";
 import usImage from "./assets/usImage.jpg";
@@ -86,7 +86,7 @@ export default function App() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.1 },
     );
 
     if (detailsRef.current) {
@@ -121,6 +121,27 @@ export default function App() {
           <h1 className="nameTitle">{t("headerTitle")}</h1>
           <h5 className="headerDate">{t("headerDate")}</h5>
         </div>
+        <button
+          style={{
+            position: "absolute",
+            bottom: 20,
+            border: "none",
+            backgroundColor: "transparent",
+            padding: 0,
+          }}
+          className="hithere"
+          onClick={() => {
+            detailsRef.current.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          <img
+            src={mailIcon}
+            alt="Scroll Down"
+            style={{ width: "40px", height: "40px" }}
+          />
+        </button>
       </header>
 
       <img
