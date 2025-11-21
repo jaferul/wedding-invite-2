@@ -48,10 +48,6 @@ export default function App() {
       ro: "Alături de părinții noștri",
       en: "Together with our parents",
     },
-    godParentsHeader: {
-      ro: "Și nașii",
-      en: "And our godparents",
-    },
     joinUs: {
       ro: "Vă așteptăm să fiți alături de noi!",
       en: "We look forward to having you with us!",
@@ -204,11 +200,6 @@ export default function App() {
           Liliana & Jamal <br /> Nusier
         </h3>
       </div>
-      <h4 className="parentsHeader" style={{marginTop: 8}}>{t("godParentsHeader")}</h4>
-      <h3 className="parentsNames" style={{marginTop: 8}}>
-          Georgiana & Remus <br /> Gârbacea
-      </h3>
-
       <div className="eventDate">
         <div className="overlay" />
         <div style={{ textAlign: "center", padding: "2rem" }}>
