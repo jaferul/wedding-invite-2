@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import locationIcon from "./assets/locationIcon.svg";
-import clockIcon from "./assets/clockIcon.svg";
+import partyIcon from "./assets/partyIcon.svg";
+import calendarIcon from "./assets/calendarIcon.svg";
+import ringsIcon from "./assets/ringsIcon.svg";
 import mailIcon from "./assets/mailIcon.svg";
 import mapIcon from "./assets/mapIcon.svg";
 import ParticipationForm from "./ParticipationForm";
@@ -62,9 +64,17 @@ export default function App() {
       ro: "Aleea Cu Brazi 3-5, Buftea 070000, România",
       en: "Aleea Cu Brazi 3-5, Buftea 070000, Romania",
     },
-    venueTime: {
-      ro: "24 Mai 2026, 17:00",
-      en: "24 May 2026, 17:00",
+    date: {
+      ro: "24 Mai 2026",
+      en: "24 May 2026",
+    },
+    venueTimeCununie: {
+      ro: "17:00 - Ceremonie",
+      en: "17:00 - Ceremony",
+    },
+    venueTimeParty: {
+      ro: "18:00 - Petrecere",
+      en: "18:00 - Party",
     },
     mapLink: {
       ro: "Vezi harta",
@@ -213,19 +223,31 @@ export default function App() {
         <div className="locationCardText">
           <span style={{ fontSize: "21px", textTransform: "uppercase" }}>
             {t("venueName")}
+          <span style={{ fontSize: "21px", textTransform: "none" }}>
+            {" "}- Mediterranean Garden
           </span>
+          </span>
+          
           <div className="iconText">
             <img
               src={locationIcon}
               alt="Location Icon"
-              height={16}
-              width={16}
+              height={18}
+              width={18}
             />
             <span>{t("venueAddress")}</span>
           </div>
           <div className="iconText">
-            <img src={clockIcon} alt="Clock Icon" height={16} width={16} />
-            <span>{t("venueTime")}</span>
+            <img src={calendarIcon} alt="Calendar Icon" height={18} width={18} />
+            <span>{t("date")}</span>
+          </div>
+          <div className="iconText">
+            <img src={ringsIcon} alt="Clock Icon" height={18} width={18} />
+            <span>{t("venueTimeCununie")}</span>
+          </div>
+          <div className="iconText">
+            <img src={partyIcon} alt="Party Icon" height={18} width={18} />
+            <span>{t("venueTimeParty")}</span>
           </div>
           <a
             href="https://maps.app.goo.gl/qwjXZC6S1M968pwB9"
@@ -234,7 +256,7 @@ export default function App() {
             className="iconText"
             style={{ textDecoration: "none", color: "#000" }}
           >
-            <img src={mapIcon} alt="Map Icon" height={16} width={16} />
+            <img src={mapIcon} alt="Map Icon" height={18} width={18} />
             <span>{t("mapLink")}</span>
           </a>
         </div>
