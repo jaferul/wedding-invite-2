@@ -21,8 +21,8 @@ export default function App() {
       en: "Karina & Jafer",
     },
     headerDate: {
-      ro: "24 Mai 2026 - București",
-      en: "24 May 2026 - Bucharest",
+      ro: "24 Mai 2026",
+      en: "24 May 2026",
     },
     loveSubtitle: {
       ro: "Iubirea noastră",
@@ -47,6 +47,10 @@ export default function App() {
     parentsHeader: {
       ro: "Alături de părinții noștri",
       en: "Together with our parents",
+    },
+    godParentsHeader: {
+      ro: "Și nașii",
+      en: "And our godparents",
     },
     joinUs: {
       ro: "Vă așteptăm să fiți alături de noi!",
@@ -200,6 +204,10 @@ export default function App() {
           Liliana & Jamal <br /> Nusier
         </h3>
       </div>
+      <h4 className="parentsHeader" style={{marginTop: 8}}>{t("godParentsHeader")}</h4>
+      <h3 className="parentsNames" style={{marginTop: 8}}>
+          Georgiana & Remus <br /> Gârbacea
+      </h3>
 
       <div className="eventDate">
         <div className="overlay" />
